@@ -1,0 +1,17 @@
+{
+  "name": "wrap",
+  "version": "0.0.0",
+  "scripts": {
+    "test": "vitest",
+    "coverage": "vitest run --coverage"
+  },
+  "dependencies": {
+    "ts-morph": "^19.0.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.3.2",
+    "tsup": "^7.1.0",
+    "typescript": "^5.1.6",
+    "vitest": "^0.32.2"
+  }
+}
