@@ -1,7 +1,28 @@
 {
-  "name": "wrap",
+  "name": "@langos/wrap",
   "version": "0.0.0",
+  "private": true,
+  "main": "./dist/index.js",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "sideEffects": false,
+  "files": [
+    "dist/**"
+  ],
+  "exports": {
+    ".": {
+      "require": "./dist/index.js",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": {
+      "require": "./package.json",
+      "import": "./package.json"
+    }
+  },
   "scripts": {
+    "build": "tsup src/index.ts --format esm,cjs --dts",
+    "dev": "pnpm build --watch",
+    "typecheck": "tsc -b",
     "test": "vitest",
     "coverage": "vitest run --coverage"
   },
